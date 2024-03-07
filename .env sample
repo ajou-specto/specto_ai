@@ -1,2 +1,2 @@
 .
-sample OPENAI_API_KEY = "sk-"
+OPENAI_API_KEY = "sk-"
