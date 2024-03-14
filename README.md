@@ -1,17 +1,17 @@
 # specto_ai
 Specto AI 기능 명세서
-> 회고록 작성에의 AI, 그중에서도 GPT 응용 모델 활용을 목표로 준비
+- 회고록 작성에의 AI, 그중에서도 GPT 응용 모델 활용을 목표로 준비
 
-> 핵심 기능
+## 핵심 기능
   - 회고록에 작성한 텍스트 정보를 요약
   - 스펙 활동 유형별로 템플릿 추천 및 자동생성
 
-> 세부 기능
->> 기존의 GPT model test
+## 세부 기능
+### 기존의 GPT model test
   - 효과적인 prompt가 무엇인지 테스트 & 선정
   - 문단의 크기별로 요약 능력이 달라지는지 검사하기
 
->> GPT implementation
+### GPT implementation
   - API key 생성
   - AI VM와 python program install
   - env와 gitignore file 설정
