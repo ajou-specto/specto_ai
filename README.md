@@ -25,8 +25,8 @@ Specto AI 기능 명세서
   - POSTMAN과 openaiAPI를 사용
   - <u>검사 방법</u>
     - openai API key 생성
-    - POSTMAN을 POST로 설정 후 주소로 _'https://api.openai.com/v1/chat/completions'_ 입력
-    - POSTMAN에 생성한 API Key를 인증키로 등록 또는 헤더로 입력 (값으로 Bearer+Key value 전달)
+    - POSTMAN을 POST로 설정 후 end-point로 _'https://api.openai.com/v1/chat/completions'_ 입력
+    - POSTMAN에 생성한 API Key를 인증키로 등록 또는 헤더로 입력 (_값으로 Bearer+Key value 전달_)
     - 헤더에 Content Type으로 application/json 추가
     - json으로 body에 model, message(role, content) 작성하여 전송
     - 정상적으로 동작할 경우 model parameter들이 반환됨
