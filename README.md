@@ -114,4 +114,5 @@ Specto AI 기능 명세서
 
 ##### C. Cusomize GPT model
 
-  - B에 성공한 경우 
+  - B에 성공한 경우 이제 completions를 엔드포인트로 사용하여 모델을 호출하는 대신,
+  
