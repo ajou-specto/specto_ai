@@ -29,7 +29,88 @@ Specto AI 기능 명세서
     - POSTMAN에 생성한 API Key를 인증키로 등록 또는 헤더로 입력 (_값으로 Bearer+Key value 전달_)
     - 헤더에 Content Type으로 application/json 추가
     - json으로 body에 model, message(role, content) 작성하여 전송
-    - 정상적으로 동작할 경우 model parameter들이 반환됨
+    
+  + <u>example_code1 ; simple computation</u>
+  ```
+  {
+    "model": "gpt-3.5-turbo-0125",
+    "messages": [
+        {
+            "role": "user",
+            "content": "what is 2+1=?"
+        }
+    ]
+  }
+  ```
+  + <u>example_code2 ; short summary</u>
+  ```
+    {
+    "model": "gpt-3.5-turbo-0125",
+    "messages": [
+        {
+            "role": "system",
+            "content": "당신의 업무는 활동 내역과 소감을 간략하게 요약하는 것입니다."
+        },
+        {
+            "role": "user",
+            "content": "세 개의 역따옴표로 구분된 텍스트를 최대 50 단어로 요약해 주세요. ```나는 이번 2023년 가을 학기에 학교 코딩 프로그래밍 대회에 참가했다. 비록 수상에는 실패했지만 java, python 등의 프로그래밍 언어를 사용하는 경험을 했으며 팀원들과 협력하는 방법에 대해 배웠다. 다음 번에 참가할 때는 수상을 목표로 준비를 해야겠다. ``` "
+        }
+    ]
+  }
+  ```
+  - 정상적으로 동작할 경우 status code로 "200 OK"와 Response가 반환됨
+  + <u>response_of_example1</u>
+  ```
+  {
+    "id": "chatcmpl-92YbIG481NevTY0BMT0mYbbvv7mpu",
+    "object": "chat.completion",
+    "created": 1710396688,
+    "model": "gpt-3.5-turbo-0125",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "2+1 equals 3."
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 14,
+        "completion_tokens": 7,
+        "total_tokens": 21
+    },
+    "system_fingerprint": "fp_4f0b692a78"
+  }
+  ```
+  + <u>response_of_example2</u>
+  ```
+  {
+    "id": "chatcmpl-954ZbjjGjWQIJGBPodw8ufRm46DMI",
+    "object": "chat.completion",
+    "created": 1710996247,
+    "model": "gpt-3.5-turbo-0125",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "2023년 가을, 학교 코딩 대회에 참가했지만 수상은 실패. Java, Python 사용해보고 팀원과 협력하는 법을 배웠다. 다음 대회에서는 수상을 목표로 더 열심히 준비할 예정."
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 207,
+        "completion_tokens": 86,
+        "total_tokens": 293
+    },
+    "system_fingerprint": "fp_fa89f7a861"
+  }
+  ```
 
 ##### C. Cusomize GPT model
 
