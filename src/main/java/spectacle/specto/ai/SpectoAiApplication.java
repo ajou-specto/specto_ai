@@ -1,0 +1,13 @@
+package spectacle.specto.ai;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class SpectoAiApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(SpectoAiApplication.class, args);
+	}
+
+}
