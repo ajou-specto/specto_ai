@@ -1,8 +1,8 @@
 package spectacle.specto.dto;
 
-import lombok.*;
-
 import java.util.List;
+
+import lombok.*;
 
 @Data
 @AllArgsConstructor
@@ -15,13 +15,13 @@ public class GPTResponse {
     @AllArgsConstructor
     @NoArgsConstructor
     public static class Choice {
-        /*GPT chat index number*/ 
+        /* GPT chat index number */
         private int index;
 
-        /* 
-        * Messages from GPT
-        * Content equales to response of GPT 
-        */
+        /*
+         * Messages from GPT
+         * Content equales to response of GPT
+         */
         private Message message;
     }
 }
