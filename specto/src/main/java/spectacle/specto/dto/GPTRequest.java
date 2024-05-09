@@ -26,5 +26,4 @@ public class GPTRequest {
         this.messages = new ArrayList<>();
 
     }
-
 }
