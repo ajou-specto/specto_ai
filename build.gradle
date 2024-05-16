@@ -5,7 +5,11 @@ plugins {
 }
 
 group = 'spectacle'
+<<<<<<< HEAD
 version = '0.0.1-SNAPSHOT'
+=======
+version = '1.0'
+>>>>>>> master
 
 java {
 	sourceCompatibility = '17'
@@ -27,6 +31,7 @@ ext {
 }
 
 dependencies {
+<<<<<<< HEAD
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-security'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
@@ -41,11 +46,33 @@ dependencies {
 	providedRuntime 'org.springframework.boot::spring-boot-starter-tomcat'
 }
 
+=======
+	//implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	//implementation 'org.springframework.boot:spring-boot-starter-security'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	//implementation 'org.springframework.ai:spring-ai-openai-spring-boot-starter'
+	compileOnly 'org.projectlombok:lombok'
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	//runtimeOnly 'com.microsoft.sqlserver:mssql-jdbc'
+	//runtimeOnly 'com.mysql:mysql-connector-j'
+	annotationProcessor 'org.projectlombok:lombok'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	//testImplementation 'org.springframework.security:spring-security-test'
+	//providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
+	//implementation 'org.springframework.boot:spring-boot-starter-tomcat'
+}
+
+/*
+>>>>>>> master
 dependencyManagement {
 	imports {
 		mavenBom "org.springframework.ai:spring-ai-bom:${springAiVersion}"
 	}
 }
+<<<<<<< HEAD
+=======
+*/
+>>>>>>> master
 
 tasks.named('test') {
 	useJUnitPlatform()
