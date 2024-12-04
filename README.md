@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # specto_ai
 
 Specto AI 기능 명세서
